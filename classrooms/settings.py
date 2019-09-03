@@ -39,8 +39,12 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'classes',
+    'app',
 
     'crispy_forms',
+
+    'rest_framework',
+
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
@@ -105,6 +109,18 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+
+
+
+
+REST_FRAMEWORK = {
+    
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    )
+    
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/
